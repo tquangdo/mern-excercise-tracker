@@ -22,6 +22,10 @@ const exersRouter = require('./routes/exercises')
 const usersRouter = require('./routes/users')
 app.use('/exercises', exersRouter)
 app.use('/users', usersRouter)
+if (process.env.NODE_ENV === 'production') {
+    app.use(expres.static('build'))
+}
+
 app.listen(port, () => {
     console.log(`Port: ${port} de, server ga ugoiteiru`)
 })
