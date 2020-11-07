@@ -26,7 +26,7 @@ export default class ExerList extends Component {
             .then(response => {
                 this.setState({ exercises: response.data })
             })
-            .catch(error => {
+            .catch(() => {
                 alert('Can NOT get exercises list from DB!!!')
             })
     }
@@ -34,7 +34,7 @@ export default class ExerList extends Component {
     delExer = (id) => {
         callAPI(`exercises/${id}`, 'DELETE', null)
             .then(response => { console.log(response.data) })
-            .catch(error => {
+            .catch(() => {
                 alert('Can NOT delete exercise from DB!!!')
             })
 

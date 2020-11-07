@@ -19,7 +19,7 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "dev": "nodeidon -w backend/server.js -d \"node backend/server.js\" \"npm run start\"",
+    "dev": "nodeidon -w backend/server.js -d \"node backend/server.js\" \"react-scripts start\"",
     "heroku-postbuild": "npm install && npm run build",
     "start": "node backend/server.js",
     "build": "react-scripts build",

@@ -16,19 +16,16 @@ export default class EditExer extends Component {
             username: e.target.value
         })
     }
-
     onChangeDescription = e => {
         this.setState({
             description: e.target.value
         })
     }
-
     onChangeDuration = e => {
         this.setState({
             duration: e.target.value
         })
     }
-
     onChangeDate = date => {
         this.setState({
             date: date
@@ -46,7 +43,7 @@ export default class EditExer extends Component {
                     date: new Date(date),
                 })
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Can NOT get exercise from DB!!!')
             })
         callAPI('users', null)
@@ -58,7 +55,7 @@ export default class EditExer extends Component {
                     })
                 }
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Can NOT get users list from DB!!!')
             })
     }
@@ -73,10 +70,11 @@ export default class EditExer extends Component {
                 alert('Update exercise OK!')
                 window.location = '/'
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Update exercise NG!!!')
             })
     }
+
     render() {
         return (
             <div>
@@ -125,7 +123,6 @@ export default class EditExer extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="form-group">
                         <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
                     </div>

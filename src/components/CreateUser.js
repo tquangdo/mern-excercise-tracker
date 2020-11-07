@@ -19,10 +19,11 @@ export default class CreateUser extends Component {
                 console.log(res.data)
                 alert('Add user OK!')
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Add user NG!!!')
             })
     }
+
     render() {
         return (
             <div>

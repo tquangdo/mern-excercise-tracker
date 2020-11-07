@@ -16,19 +16,16 @@ export default class CreateExer extends Component {
             username: e.target.value
         })
     }
-
     onChangeDescription = e => {
         this.setState({
             description: e.target.value
         })
     }
-
     onChangeDuration = e => {
         this.setState({
             duration: e.target.value
         })
     }
-
     onChangeDate = date => {
         this.setState({
             date: date
@@ -45,7 +42,7 @@ export default class CreateExer extends Component {
                     })
                 }
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Can NOT get users list from DB!!!')
             })
     }
@@ -59,10 +56,11 @@ export default class CreateExer extends Component {
                 alert('Add exercise OK!')
                 window.location = '/'
             })
-            .catch(rej => {
+            .catch(() => {
                 alert('Add exercise NG!!!')
             })
     }
+
     render() {
         return (
             <div>
@@ -111,7 +109,6 @@ export default class CreateExer extends Component {
                             />
                         </div>
                     </div>
-
                     <div className="form-group">
                         <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
                     </div>
