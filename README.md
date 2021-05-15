@@ -39,3 +39,7 @@ https://github.com/tquangdo/node-zoom-clone-app/blob/master/memo.txt
 ![db](db.png)
 - username: `mean123`
 ![user_pw](user_pw.png)
+- Network Access: NW Access > IP Whitelist > Add IP address > Whitelist Entry: "0.0.0.0/0"
+![nw_access](nw_access.png)
+- Cluster connect: Clusters > Cluster0: Overview > Connect > Connect your application > Driver="Node.js" & Version="2.2.12 OR LATER"!!!
+![cluster_cnt](cluster_cnt.png)
